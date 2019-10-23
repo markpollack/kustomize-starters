@@ -1,0 +1,5 @@
+commonLabels:
+  app.kubernetes.io/name: webdemo-default
+resources:
+  - deployment.yaml
+  - service.yaml
