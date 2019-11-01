@@ -13,3 +13,17 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
+          volumeMounts:
+          - name: spring-configmap-volume            
+            mountPath: /config  # pair the default value with the how the 
+                                # container image generation and the workdir.
+                                # this works with jib 'distroless' since workdir is "" (root)
+                                # This value can be overriden in another kustomization
+          envFrom:
+            - configMapRef:
+                name: spring-configmap-env
+      volumes:
+        - name: spring-configmap-volume
+          configMap:
+            name: spring-configmap
+             
