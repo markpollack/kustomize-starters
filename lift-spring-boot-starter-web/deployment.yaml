@@ -21,7 +21,7 @@ spec:
                                 # This value can be overriden in another kustomization
           envFrom:
             - configMapRef:
-              name: spring-configmap-env
+                name: spring-configmap-env
       volumes:
         - name: spring-configmap-volume
           configMap:
