@@ -22,7 +22,7 @@ spec:
               value: db_example
             - name: MYSQL_USER
               value: springuser
-            - name: MYSQL_ROOT_PASSWORD
+            - name: MYSQL_PASSWORD
               value: ThePassword
           ports:
             - containerPort: 3306
